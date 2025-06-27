@@ -1,5 +1,3 @@
-version: '3.2'
-
 services:
     api:
         image: ghcr.io/engineer-man/piston
@@ -12,3 +10,8 @@ services:
             - ./data/piston/packages:/piston/packages
         tmpfs:
             - /tmp:exec
+
+    piston_repo:
+        image: ghcr.io/engineer-man/piston
+        volumes:
+          - ./repo:/repo
